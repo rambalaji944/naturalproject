@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Natural Infusions - Hair Serum | Onion Hair Oil | Shampoo</title>
+  <link rel="stylesheet" href="styles.css">
+  <style>
+    /* Basic Styles */
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+    body {
+      font-family: Arial, sans-serif;
+    }
+
+    /* Text Slideshow Styles */
+    .text-slideshow-container {
+      width: 100%;
+      padding: 20px;
+      text-align: center;
+      background-color: green;
+    }
+    .text-slide {
+      display: none;
+      font-size: 1.2em;
+    }
+
+   
+
+ 
+
+    /* Navbar Styles */
+    .navbar {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 10px 20px;
+      background-color: #ffffff;
+    }
+    .navbar a {
+      color: rgb(20, 8, 8);
+      padding: 8px 16px;
+      text-decoration: none;
+    }
+    
+    .navbar, .logo,.navbar .search, .navbar .pro, .navbar .car {
+      width: 50px;
+    }
+
+    
+
+    /* Image Slideshow Styles */
+    .image-slideshow-container {
+      width: 100%;
+      max-width: 600px;
+      position: relative;
+      margin: 0 auto;
+    }
+   /* Image Slideshow Styles */
+.image-slideshow-container {
+  width: 100%;
+  max-width: 1300px; /* Adjust this to make the container larger */
+  max-height: 500px; /* Adjust the height as desired */
+  position: relative;
+  margin: 0 auto;
+}
+
+.image-slide img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover; /* Keeps the aspect ratio and covers the entire container */
+}
+
+
+
+    /* Slideshow navigation */
+    .prev, .next {
+      cursor: pointer;
+      position: absolute;
+      top: 50%;
+      width: auto;
+      padding: 16px;
+      color: white;
+      font-weight: bold;
+      transition: 0.3s ease;
+      border-radius: 0 3px 3px 0;
+    }
+    .next {
+      right: 0;
+      border-radius: 3px 0 0 3px;
+    }
+    .prev:hover, .next:hover {
+      background-color: rgba(0,0,0,0.8);
+    }
+  </style>
+</head>
+<body>
+
+<!-- Text Slideshow Container -->
+<div class="text-slideshow-container">
+  <div class="text-slide">Free Shipping On All Orders above Rs.1500 | Shop Now</div>
+  <div class="text-slide">Now Book your Free consultation with our Dermatologist.</div>
+</div>
+
+<!-- Navbar -->
+<div class="navbar">
+    <div class="nav-left">
+    <a href="#logo"><img src="logo.png" alt="Logo" class="logo"></a>
+  </div>
+  <div class="nav-center">
+    <a href="#shop">Shop</a>
+    <a href="#about">About Us</a>
+    <a href="#blog">Blog</a>
+    <a href="#contact">Contact Us</a>
+  </div>
+  <div class="nav-right">
+
+    <a href="#search"><img src="search.png" alt="Search" class="search"></a>
+    <a href="#profile"><img src="pro.png" alt="Profile" class="pro"></a>
+    <a href="#cart"><img src="csrt.png" alt="Cart" class="car"></a>
+  </div>
+</div>
+
+<!-- Image Slideshow Container -->
+<div class="image-slideshow-container">
+  <div class="image-slide">
+    <img src="main1.png" alt="Hair Care Product 1">
+  </div>
+  <div class="image-slide">
+    <img src="man2.png" alt="Hair Care Product 2">
+  </div>
+  <a class="prev" onclick="plusImageSlides(-1)">&#10094;</a>
+  <a class="next" onclick="plusImageSlides(1)">&#10095;</a>
+</div>
+
+<script>
+  let textSlideIndex = 0;
+  let imageSlideIndex = 0;
+
+  function showTextSlides() {
+    let i;
+    const textSlides = document.getElementsByClassName("text-slide");
+    for (i = 0; i < textSlides.length; i++) {
+      textSlides[i].style.display = "none";  
+    }
+    textSlideIndex++;
+    if (textSlideIndex > textSlides.length) { textSlideIndex = 1 }    
+    textSlides[textSlideIndex - 1].style.display = "block";  
+    setTimeout(showTextSlides, 3000); // Change text every 3 seconds
+  }
+
+  function showImageSlides() {
+    let i;
+    const imageSlides = document.getElementsByClassName("image-slide");
+    for (i = 0; i < imageSlides.length; i++) {
+      imageSlides[i].style.display = "none";  
+    }
+    imageSlideIndex++;
+    if (imageSlideIndex > imageSlides.length) { imageSlideIndex = 1 }    
+    imageSlides[imageSlideIndex - 1].style.display = "block";  
+    setTimeout(showImageSlides, 5000); // Change image every 5 seconds
+  }
+
+  function plusImageSlides(n) {
+    imageSlideIndex += n;
+    showImageSlides();
+  }
+
+  // Initialize slideshows
+  showTextSlides();
+  showImageSlides();
+</script>
+
+</body>
+</html>
