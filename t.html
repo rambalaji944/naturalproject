@@ -1,0 +1,547 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Natural Infusions - Hair Serum | Onion Hair Oil | Shampoo</title>
+  <link rel="stylesheet" href="styles.css">
+  <style>
+    /* Basic Styles */
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+    body {
+      font-family: Arial, sans-serif;
+    }
+
+    /* Text Slideshow Styles */
+    .text-slideshow-container {
+      width: 100%;
+      padding: 20px;
+      text-align: center;
+      background-color: #30eb39;
+    }
+    .text-slide {
+      display: none;
+      font-size: 1.2em;
+    }
+
+    .center-text2 {
+      font-size: 43px;
+      text-align: center;
+      font-style:normal;
+}
+
+.center-text1 {
+      font-size: 20px;
+      text-align: center;
+      font-style:normal;
+
+}
+    /* Navbar Styles */
+    .navbar {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 10px 20px;
+      background-color: #ffffff;
+    }
+    .navbar a {
+      color: rgb(12, 7, 7);
+      padding: 8px 16px;
+      text-decoration: none;
+    }
+    .navbar .logo, .navbar .search, .navbar .pro, .navbar .car {
+      width: 30px;
+    }
+
+    .navbar .logo {
+  width: 110px; /* Increase this value to make the logo larger */
+  height: auto; /* This keeps the aspect ratio of the logo */
+}
+
+    /* Image Slideshow Styles */
+  /* Image Slideshow Styles */
+.image-slideshow-container {
+  width: 100%;
+  max-width: 1300px; /* Adjust this to make the container larger */
+  max-height: 500px; /* Adjust the height as desired */
+  position: relative;
+  margin: 0 auto;
+}
+
+.image-slide img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover; /* Keeps the aspect ratio and covers the entire container */
+}
+
+    /* Slideshow navigation */
+    .prev, .next {
+      cursor: pointer;
+      position: absolute;
+      top: 50%;
+      width: auto;
+      padding: 16px;
+      color: white;
+      font-weight: bold;
+      transition: 0.3s ease;
+      border-radius: 0 3px 3px 0;
+    }
+    .next {
+      right: 0;
+      border-radius: 3px 0 0 3px;
+    }
+    .prev:hover, .next:hover {
+      background-color: rgba(0,0,0,0.8);
+    }
+
+    .pre{
+      padding-left: 99px;
+
+    }
+
+    .best{
+      font-size: 42px;
+      text-align: center;
+      font-style:normal;
+    }
+
+    .Watch{
+      font-size: 40px;
+      text-align: center;
+      font-style:normal; 
+    }
+    
+    .best1{
+      font-size: 15px;
+      text-align: center;
+      font-style:normal;
+    }
+    /* Container with border */
+.border-container {
+  /* Centers images within the container */
+  gap: 44px; /* Space between images */
+  border: 2px solid #eceaea;
+  padding: 20px;
+  background-color: gainsboro;
+  max-width: 1350px;
+}
+
+/* Image styling */
+.center-image1 {
+  width: 100%;
+
+  height: 493px; /* Makes the image responsive */
+  max-width: 440px; /* Adjust size as needed */
+  margin: 0 auto 10px; /* Centers image and adds space below */
+}
+
+.center-image2 {
+  width: 100%;
+  padding-left: 24px;
+  height: 493px; /* Makes the image responsive */
+  max-width: 420px; /* Adjust size as needed */
+  margin: 0 auto 10px; /* Centers image and adds space below */
+}
+
+
+.center-image3 {
+  width: 100%;
+  padding-left: 14px;
+  height: 590px; /* Makes the image responsive */
+  max-width: 410px; /* Adjust size as needed */
+  padding-bottom: 30px;
+  gap: 11px;
+  padding-top: 85px;
+}
+
+.center-image4 {
+  width: 100%;
+  height: 590px; /* Makes the image responsive */
+  max-width: 380px; /* Adjust size as needed */
+  padding-bottom: 30px;
+  gap: 11px;
+  padding-top: 85px;
+}
+
+/* Text styling */
+.center-text {
+  font-size: 16px; /* Adjust font size as needed */
+  margin: 0;
+}
+
+.video-container {
+  border-radius: 10px;
+  margin: 100px;
+   
+}
+
+.responsive-video {
+  width: 100%;  /* 80% of the container width */
+  max-width: 210px;  /* Ensures it doesn't stretch beyond its container */
+  height:auto;  /* Maintain aspect ratio */
+  border-radius: 10px;
+  cursor: pointer;  /* Makes it clear that the video is clickable */
+}
+
+.containerss {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 100vh;
+  padding: 20px;
+}
+.oth{
+  font-size: 32px;
+  margin-left: 480px;
+  
+}
+
+.left-side {
+  font-size: 15px;
+  flex: 1;
+  padding: 10px;
+  background-color: #fff;
+  border-radius: 10px;
+}
+
+.right-side {
+  flex: 1;
+  padding: 20px;
+}
+
+.responsive-image {
+  width: 100%;
+  max-width: 400px;
+  height: auto;
+  border-radius: 10px;
+}
+
+.button {
+  display: inline-block;
+  background-color: #0f7a2a;
+  color: white;
+  font-size: 27px;
+  margin-left: 299px;
+  padding: 10px 20px;
+  text-decoration: none;
+  border-radius: 20px;
+  margin-top: 20px;
+  transition: background-color 0.3s ease;
+
+}
+
+.button:hover {
+  background-color: #0056b3;
+}
+
+.how{
+  font-size: 23px;
+  margin-left: 254px;
+}
+
+
+.footer {
+  background-color: #333;
+  color: white;
+  padding: 40px 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+
+.footer-content {
+  max-width: 800px; /* Limit the width for a centered alignment */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 30px;
+}
+
+.footer-logo img {
+  width: 100px;
+  height: auto;
+  margin-bottom: 3px;
+}
+
+.footer-menu {
+  display: flex;
+  justify-content: center;
+  gap: 40px; /* Space between Menu and Policy sections */
+  flex-wrap: wrap; /* Makes it responsive */
+}
+
+.menu-section, .policy-section {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.menu-section h4, .policy-section h4 {
+  font-size: 1.1em;
+  color: #ddd;
+  margin-bottom: 10px;
+}
+
+.footer-menu a {
+  color: #ddd;
+  text-decoration: none;
+  margin: 5px 0;
+}
+
+.footer-menu a:hover {
+  color: #fff;
+}
+
+.social-section p {
+  color: #ddd;
+  font-size: 1em;
+  margin: 0;
+}
+  </style>
+</head>
+<body>
+
+<!-- Text Slideshow Container -->
+<div class="text-slideshow-container">
+  <div class="text-slide">Free Shipping On All Orders above Rs.1500 | Shop Now</div>
+  <div class="text-slide">Now Book your Free consultation with our Dermatologist.</div>
+</div>
+
+<!-- Navbar -->
+<div class="navbar">
+    <div class="nav-left">
+    <a href="#logo"><img src="logo.png" alt="Logo" class="logo"></a>
+  </div>
+  <div class="nav-center">
+    <a href="#shop">Shop</a>
+    <a href="#about">About Us</a>
+    <a href="#blog">Blog</a>
+    <a href="#contact">Contact Us</a>
+  </div>
+  <div class="nav-right">
+
+    <a href="#search"><img src="search.png" alt="Search" class="search"></a>
+    <a href="#profile"><img src="pro.png" alt="Profile" class="pro"></a>
+    <a href="#cart"><img src="csrt.png" alt="Cart" class="car"></a>
+  </div>
+</div>
+
+<!-- Image Slideshow Container -->
+<div class="image-slideshow-container">
+  <div class="image-slide">
+    <img src="main1.png" alt="Hair Care Product 1">
+  </div>
+  <div class="image-slide">
+    <img src="man2.png" alt="Hair Care Product 2">
+  </div>
+  <a class="prev" onclick="plusImageSlides(-1)">&#10094;</a>
+  <a class="next" onclick="plusImageSlides(1)">&#10095;</a>
+</div>
+
+<br><br>
+  <div class="center-text2"><p ><b>Natural and organic Haircare</p></b></div>
+  <br>
+  <div class="center-text1">
+    <pre>
+      Natural Infusion is a clean haircare line infused with nourishing,
+      desert-derived botanicals and dreamlike scents. Every product is intentionally
+      crafted to honor your haircare rituals from sunrise to sunset
+    </pre></div>
+  
+    <div class="border-container">
+      <div class="best">
+        <p><b>The Best Of Hair Care</b></p>
+      </div>
+      
+      <div class="best1">
+        <pre>Shop a complete array of best-in-class products for personalized hair care. Validated by dermatologists for visible results and
+           suitable for all hair types. Hair gets healthy day after day!</pre>
+      </div>
+    
+      <a href="https://example.com/link1">
+        <img src="l1.png" alt="Sample Image 1" class="center-image1">
+      </a>
+      <a href="https://example.com/link2">
+        <img src="l2.png" alt="Sample Image 2" class="center-image2">
+      </a>
+      <a href="https://example.com/link3">
+        <img src="l.png" alt="Sample Image 3" class="center-image3">
+      </a>
+    
+    </div>
+<br><br>
+    
+    <div class="video-container">
+      <div class="Watch">
+        <p>Watch & Buy</p>
+      </div>
+
+      <video id="myVideo" class="responsive-video" controls>
+        <source src="v1.mp4" type="video/mp4">
+      </video>
+      &nbsp; &nbsp;
+      <video id="myVideo" class="responsive-video" controls>
+        <source src="v2.mp4" type="video/mp4">
+      </video>
+      &nbsp; &nbsp; 
+      <video id="myVideo" class="responsive-video" controls>
+        <source src="v3.mp4" type="video/mp4">
+      </video>
+      &nbsp; &nbsp; 
+      <video id="myVideo" class="responsive-video" controls>
+        <source src="v4.mp4" type="video/mp4">
+      </video>
+      &nbsp; &nbsp;  
+      <video id="myVideo" class="responsive-video" controls>
+        <source src="v5.mp4" type="video/mp4">
+      </video>
+    </div>
+
+    <img src="gr.png" alt="">
+
+    <div class="containerss">
+      <div class="left-side">
+
+        <div class="how">
+        <pre>How Does It Work?</pre>
+      </div><br>
+
+        <pre>
+          This novel ingredient blend combines two patented molecules — dihydroquercetin-
+          glucoside (DHQG) and Epigallocatechin gallate (EGCG2) — to help prevent the 
+          appearance of hair loss and boost the reactivation of hair growth by 
+          targeting hair follicle stems cells & reactivation of stem cells.</pre>
+        <a href="https://www.example.com" class="button">Know more</a>
+      </div>
+      <div class="right-side">
+        <img src="sc.png" alt="Description of Image" class="responsive-image">
+      </div>
+      <br><br>
+      </div>
+<div class=oth>
+  <p>See Results in Just 2-3 Months</p>
+</div>
+
+<img src="ha.png" alt="" style="width: 1332px; height: 524px;">
+<br><br>
+
+<img src="re.png" alt="">     
+
+<div class="border-container">
+  <div class="best">
+    <p><b>Blog posts
+    </b></p>
+  </div>
+  
+  
+
+  <a href="https://example.com/link1">
+    <img src="b1.png" alt="Sample Image 1" class="center-image1">
+  </a>
+  <a href="https://example.com/link2">
+    <img src="b2.png" alt="Sample Image 2" class="center-image2">
+  </a>
+  <a href="https://example.com/link3">
+    <img src="b3.png" alt="Sample Image 3" class="center-image3">
+  </a>
+
+</div>
+
+<br>
+
+  <div class="best">
+    <p><b>Follow Us On Instagram
+    </b></p>
+  </div>
+
+  <footer class="footer">
+    <!-- Bottom Left Logo -->
+    <div class="footer-logo">
+      <img src="logo.png" alt="Company Logo">
+    </div>
+
+    <!-- Centered Menu -->
+    <div class="footer-menu">
+      <div class="menu-section">
+        <a href="#shop">Shop</a>
+        <a href="#about-us">About Us</a>
+        <a href="#ingredients">Ingredients</a>
+        <a href="#contact">Contact</a>
+        <a href="#blogs">Blogs</a>
+      </div>
+
+      <div class="policy-section">
+        <a href="#policies">Policies</a>
+        <a href="#shipping-policy">Shipping Policy & Return Policy</a>
+        <a href="#terms-of-service">Terms of Service</a>
+        <a href="#privacy-policy">Privacy Policy</a>
+      </div>
+
+      <div class="social-section">
+        <p>Follow Us</p>
+        <!-- You can add icons for social links here -->
+      </div>
+    </div>
+  </footer>
+
+<script>
+  let textSlideIndex = 0;
+  let imageSlideIndex = 0;
+
+  function showTextSlides() {
+    let i;
+    const textSlides = document.getElementsByClassName("text-slide");
+    for (i = 0; i < textSlides.length; i++) {
+      textSlides[i].style.display = "none";  
+    }
+    textSlideIndex++;
+    if (textSlideIndex > textSlides.length) { textSlideIndex = 1 }    
+    textSlides[textSlideIndex - 1].style.display = "block";  
+    setTimeout(showTextSlides, 3000); // Change text every 3 seconds
+  }
+
+  function showImageSlides() {
+    let i;
+    const imageSlides = document.getElementsByClassName("image-slide");
+    for (i = 0; i < imageSlides.length; i++) {
+      imageSlides[i].style.display = "none";  
+    }
+    imageSlideIndex++;
+    if (imageSlideIndex > imageSlides.length) { imageSlideIndex = 1 }    
+    imageSlides[imageSlideIndex - 1].style.display = "block";  
+    setTimeout(showImageSlides, 5000); // Change image every 5 seconds
+  }
+
+  function plusImageSlides(n) {
+    imageSlideIndex += n;
+    showImageSlides();
+  }
+
+  // Initialize slideshows
+  showTextSlides();
+  showImageSlides();
+
+
+  const video = document.getElementById("myVideo");
+  
+  // Add event listener for video click to toggle play/pause
+  video.addEventListener("click", function() {
+    if (video.paused) {
+      video.play();  // Play the video if it is paused
+    } else {
+      video.pause();  // Pause the video if it is playing
+    }
+  });
+
+</script>
+
+<script>
+  
+</script>
+
+</body>
+</html>
